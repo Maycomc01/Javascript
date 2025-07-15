@@ -14,7 +14,7 @@ function calcularPrecios() {
   }
   return total;
 }
-
+// hasta aca lo hizo solo, desde aca me ayude de la IA
 function calcularTotal() {
   console.log("Resumen de pedido");
   platos.forEach((p) => {
