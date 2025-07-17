@@ -9,19 +9,25 @@ function ingresarPlatos() {
 
 function calcularPrecios() {
   let total = 0;
-  for (let item of platos) {
-    total += item.precio * item.cantidad;
+  for (let i = 0; i < platos.length; i++) {
+    total += platos[i].precio * platos[i].cantidad;
   }
   return total;
 }
-// hasta aca lo hizo solo, desde aca me ayude de la IA
+
 function calcularTotal() {
-  console.log("Resumen de pedido");
-  platos.forEach((p) => {
-    console.log(`${p.nombre} x${p.cantidad} - $${p.precio * p.cantidad}`);
-  });
+  console.log("Resumen del Pedido");
+
+  for (let i = 0; i < platos.length; i++) {
+    console.log(
+      `${platos[i].nombre} x${platos[i].cantidad} - $${
+        platos[i].precio * platos[i].cantidad
+      }`
+    );
+  }
   alert("Total a pagar: $" + calcularPrecios());
 }
+
 do {
   ingresarPlatos();
 } while (confirm("¿Desea agregar otro plato?"));
