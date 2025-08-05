@@ -33,22 +33,41 @@
 // } while (confirm("¿Desea agregar otro plato?"));
 
 // calcularTotal();
-let platos = [];
+const platos = [];
 
 function ingresarPlatos() {
-  let nombre = document.getElementById("nombre");
-  let precio = document.getElementById("precio");
-  let cantidad = document.getElementById("cantidad");
-  platos.push({ nombre, precio, cantidad });
+  const mesa = document.getElementById("mesa").value;
+  const plato = document.getElementById("plato").value;
+  const precio = parseFloat(document.getElementById("precio").value);
+  const cantidad = parseInt(document.getElementById("cantidad").value);
+
+  const pedido = {
+    mesa,
+    plato,
+    cantidad,
+    precio,
+    total: cantidad * precio,
+    estado: "abierto",
+  };
+
+  platos.push(pedido);
+
+  document.getElementById("pedidoFormulario").reset();
+  alert("pedido agregado");
 }
-let ultimoId = 1;
+
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .getElementById("btnAceptar")
+    .addEventListener("click", ingresarPlatos);
+});
 
 function mostrarFormulario() {
   document.getElementById("formularioDelPedido").style.display = "block";
   document.getElementById("verPedidos").style.display = "none";
 }
 
-function motrarPedidos() {
+function mostrarPedidos() {
   document.getElementById("formularioDelPedido").style.display = "none";
   document.getElementById("verPedidos").style.display = "none";
 }
@@ -67,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document
     .getElementById("btnVerPedidos")
-    .addEventListener("click", motrarPedidos);
+    .addEventListener("click", mostrarPedidos);
 
   document.getElementById("btnEstado").addEventListener("click", mostrarFiltro);
 });

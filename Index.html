@@ -16,33 +16,31 @@
     <div id="formularioDelPedido">
       <h2>Crear Nuevo Pedido</h2>
       <form id="pedidoFormulario">
-        <p>
-          <label> Nombre del Cliente:</label>
-          <input type="text" id="cliente" required />
-          <p>Mesa N°</p><select id="Mesa">
+        <div>
+          <label> Mesa N° </label>
+          <select id="mesa">
             <option value="none"></option>
-            <option value="Barra"> BARRA</option>
-            <option values="Mesa 1">1</option>
-            <option values="Mesa 2">2</option>
-            <option values="Mesa 3">3</option>
-            <option values="Mesa 4">4</option>
-            <option values="Mesa 5">5</option>
-            <option values="Mesa 6">6</option>
-            <option values="Mesa 7">7</option>
-            
+            <option value="Barra">BARRA</option>
+            <option value="Mesa 1">1</option>
+            <option value="Mesa 2">2</option>
+            <option value="Mesa 3">3</option>
+            <option value="Mesa 4">4</option>
+            <option value="Mesa 5">5</option>
+            <option value="Mesa 6">6</option>
+            <option value="Mesa 7">7</option>
           </select>
-        </p>
+        </div>
         <p>
-          <label> Pedido: </label> <br>  
-          <input type="text" id="plato" required /> <br>
-          <label>Cantidad:</label>   <br>  
-          <input type="number" id="cantidad" required /> <br>
-          <label>Precio:</label> <br>
-          <input type="number" id="precio"  required/><br>
+          <label> Pedido: </label> <br />
+          <input type="text" id="plato" required /> <br />
+          <label>Cantidad:</label> <br />
+          <input type="number" id="cantidad" required /> <br />
+          <label>Precio:</label> <br />
+          <input type="number" id="precio" required /><br />
         </p>
       </form>
       <button id="btnAceptar">ACEPTAR</button>
-      <button id="btnAgregar"> AGREGAR</button>
+      <button id="btnAgregar">AGREGAR</button>
     </div>
 
     <div id="verPedidos">
@@ -50,12 +48,12 @@
       <p>
         <label>Estado:</label>
         <select id="filtroPedido">
+          <option value="">Todos</option>
           <option value="abrierto">ABIERTO</option>
           <option value="cerrado">CERRADO</option>
         </select>
         <button id="btnAplicarFiltro">Aplicar Filtro</button>
       </p>
-
     </div>
     <script src="./Js/gastronomia.js"></script>
   </body>
