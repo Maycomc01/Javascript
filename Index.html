@@ -6,6 +6,55 @@
     <title>Primera-Entrega-Castillo</title>
   </head>
   <body>
+    <h1>Gastronomia Resto-Bar</h1>
+    <section id="Menu">
+      <button id="btnCrear">Crear Pedido</button>
+      <button id="btnVerPedidos">Ver Pedidos</button>
+      <button id="btnEstado">Estado de Pedidos</button>
+    </section>
+
+    <div id="formularioDelPedido">
+      <h2>Crear Nuevo Pedido</h2>
+      <form id="pedidoFormulario">
+        <div>
+          <label> Mesa N° </label>
+          <select id="mesa">
+            <option value="none"></option>
+            <option value="Barra">BARRA</option>
+            <option value="Mesa 1">1</option>
+            <option value="Mesa 2">2</option>
+            <option value="Mesa 3">3</option>
+            <option value="Mesa 4">4</option>
+            <option value="Mesa 5">5</option>
+            <option value="Mesa 6">6</option>
+            <option value="Mesa 7">7</option>
+          </select>
+        </div>
+        <p>
+          <label> Pedido: </label> <br />
+          <input type="text" id="plato" required /> <br />
+          <label>Cantidad:</label> <br />
+          <input type="number" id="cantidad" required /> <br />
+          <label>Precio:</label> <br />
+          <input type="number" id="precio" required /><br />
+        </p>
+      </form>
+      <button id="btnAceptar">ACEPTAR</button>
+      <button id="btnAgregar">AGREGAR</button>
+    </div>
+
+    <div id="verPedidos">
+      <h2>Filtrar Pedidos</h2>
+      <p>
+        <label>Estado:</label>
+        <select id="filtroPedido">
+          <option value="">Todos</option>
+          <option value="abrierto">ABIERTO</option>
+          <option value="cerrado">CERRADO</option>
+        </select>
+        <button id="btnAplicarFiltro">Aplicar Filtro</button>
+      </p>
+    </div>
     <script src="./Js/gastronomia.js"></script>
   </body>
 </html>
