@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: rgb(0, 0, 0);
+}
+body {
+  text-align: center;
+  color: #ffb22c;
+}
+h1 {
+  text-align: center;
+  color: #ffb22c;
+}
+
+#btnCrear {
+  margin-bottom: 24px;
+  height: 32px;
+  width: 100px;
+  background-color: black;
+  color: #ffb22c;
+  justify-content: center;
+  border-radius: 15px;
+  border: solid;
+}
+#btnVerPedidos {
+  margin-bottom: 24px;
+  height: 32px;
+  width: 100px;
+  background-color: black;
+  color: #ffb22c;
+  justify-content: center;
+  border-radius: 15px;
+  border: solid;
+}
+
+#btnEstado {
+  margin-bottom: 24px;
+  height: 32px;
+  width: 107px;
+  background-color: black;
+  color: #ffb22c;
+  justify-content: center;
+  border-radius: 15px;
+  border: solid;
+}
+#formularioDelPedido {
+  color: #ffb22c;
+}
+button {
+  color: #ffb22c;
+  height: 32px;
+  width: 100px;
+  border-radius: 15px;
+  border: solid;
+  margin-top: 15px;
+}
+#plato {
+  margin: 15px;
+  height: 24px;
+  width: 107;
+  border: solid;
+  color: #ffb22c;
+  background-color: black;
+}
+#cantidad {
+  margin: 15px;
+  height: 24px;
+  width: 107;
+  border: solid;
+  color: #ffb22c;
+  background-color: black;
+}
+
+#precio {
+  margin: 15px;
+  height: 24px;
+  width: 107;
+  border: solid;
+  color: #ffb22c;
+  background-color: black;
+}
+select {
+  margin: 15px;
+  height: 24px;
+  width: 107;
+  border: solid;
+  color: #ffb22c;
+  background-color: black;
+}

@@ -1,4 +1,4 @@
-let pedidos = [];
+let pedidos = JSON.parse(localStorage.getItem("pedidos")) || [];
 let ultimoId = 1;
 
 function mostrarFormulario() {
@@ -50,12 +50,11 @@ function crearTicket(e) {
   };
 
   pedidos.push(resumen);
+  localStorage.setItem("pedidos", JSON.stringify(pedidos));
   alert("✅ Ticket creado");
-  mostrarTickets(pedidos);
   document.getElementById("pedidoFormulario").reset();
 }
 
-// Mostrar tickets
 function mostrarTickets(lista) {
   const listaPedidos = document.getElementById("listaPedidos");
   if (lista.length === 0) {
